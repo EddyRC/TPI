@@ -1,0 +1,148 @@
+/* Codigo realizado por:
+    Edgar Antonio Reyes Ceron
+    Carnet: RC18050 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+.contenedor{
+    background: rgba(29, 79, 155, 0.842);
+    display: grid;
+    grid: repeat(4, 1fr) / repeat(2, 1fr);
+    grid-template-areas: 
+        "tituloJuego tituloJuego"
+        "jugador1 jugador2"
+        "dado1 dado2"
+        "boton boton";
+    justify-items: center;
+}
+.titulo-principal{
+    color: tomato;
+    font-size: 40px;
+    grid-area: tituloJuego;
+    padding: 40px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+.jugador1{
+    color: tomato;
+    font-size: 30px;
+    grid-area: jugador1;
+    justify-self: end;
+    margin-right: 60px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+.jugador2{
+    color: tomato;
+    font-size: 30px;
+    grid-area: jugador2;
+    justify-self: start;
+    margin-left: 60px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+/* Estilos para los dados */
+.dado1, .dado2{
+    width: 25%;
+    height: 200px;
+    border: black solid 5px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0.3em 0.3em 0.5em black;
+}
+/* Ubicacion de los dados */
+.dado1{
+    grid-area: dado1;
+    justify-self: end;
+    margin-right: 50px;
+
+    /*Grid para los puntos del dado */
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.dado2{
+    grid-area: dado2;
+    justify-self: start;
+    margin-left: 50px;
+
+    /*Grid para los puntos del dado */
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+/* Estilos para los puntos de los dados */
+[class^="punto"]{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    font-size: 85px;
+}
+
+/*Puntos Dado 1*/
+.puntoCentralD1{
+    grid-area: 2/2;
+}
+.punto1D1{
+    grid-area: 1/1;
+}
+.punto2D1{
+    grid-area: 2/1;
+}
+.punto3D1{
+    grid-area: 3/1;
+}
+.punto4D1{
+    grid-area: 1/3;
+}
+.punto5D1{
+    grid-area: 2/3;
+}
+.punto6D1{
+    grid-area: 3/3;
+}
+/*----------------*/
+
+/*Puntos Dado 2*/
+.puntoCentralD2{
+    grid-area: 2/2;
+}
+.punto1D2{
+    grid-area: 1/1;
+}
+.punto2D2{
+    grid-area: 2/1;
+}
+.punto3D2{
+    grid-area: 3/1;
+}
+.punto4D2{
+    grid-area: 1/3;
+}
+.punto5D2{
+    grid-area: 2/3;
+}
+.punto6D2{
+    grid-area: 3/3;
+}
+/*----------------*/
+.ocultarPunto{
+    display: none;
+}
+
+.botoncito{
+    color: black;
+    background-color: wheat;
+    text-decoration: none;
+    cursor: hand;
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0.3em 0.3em 0.5em black;
+    grid-area: boton;
+    align-self: center;
+}
